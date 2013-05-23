@@ -1,4 +1,16 @@
 AppCoco::Application.routes.draw do
+  resources :photos
+
+
+  resources :videos
+
+
+  resources :sites
+
+
+  resources :categories
+
+
   get "home/index"
   root :to => 'home#index'
   # The priority is based upon order of creation:
