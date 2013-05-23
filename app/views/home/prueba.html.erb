@@ -1,0 +1,211 @@
+<style>
+
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+
+	border: 1px solid #ccc;
+}
+
+	.flip-container:hover .flipper,  
+  .flip-container.hover .flipper {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	/*width: 320px;
+	height: 427px;*/
+	width: 360px;
+	height: 270px;
+
+}
+
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+  
+  -o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	background: #00A480;
+	z-index: 2;
+}
+
+.back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+
+	background: #FFF400;
+}
+
+
+
+
+/**/
+
+.container-fluid {
+padding-right: 0px;
+padding-left: 0px;
+}
+
+.carousel {
+    height: 650px;
+    overflow: hidden;
+}
+.carousel .item {
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+.carousel .active.left, .carousel .active.right {
+    left:0;
+    opacity:0;
+    z-index:2;
+}
+.carousel .next, .carousel .prev {
+    left:0;
+    opacity:1;
+    z-index:1;
+}
+.display {
+width: 100%;
+border: 1px dashed #e5e5e5;
+padding: 9px;
+margin: 19px 0 0 -10px;
+overflow: hidden;
+}
+
+</style>
+
+
+<div class="container-fluid">
+
+<%= render 'share/carousel'%>
+
+</div>
+<div class="container">
+	<h1><img src="/img/p-1.png">SOLO</h1>
+	<div class="display">
+		<div class="row">
+			<div class="span5">
+				<ul class="thumbnails">
+					<li class="span5"><!--noticias normal-->
+						<div class="thumbnail flip-container" ontouchstart="this.classList.toggle('hover');">
+							<div class="flipper">
+								<div class="front">
+									<img src="/img/foto2.jpg" style="width: 360px; height: 270px;">
+									<!-- front content -->
+								</div>
+								<div class="back">
+									<img src="/img/p-1.png">
+									<!-- back content -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul class="thumbnails">
+					<li class="span3"><!--noticias normal-->
+						<div class="thumbnail">
+							<img src="/img/foto2.jpg">
+						</div>
+					</li>
+					<li class="span3"><!--noticias normal-->
+						<div class="thumbnail">
+							<img src="/img/foto2.jpg">
+						</div>
+					</li>
+					<li class="span3"><!--noticias normal-->
+						<div class="thumbnail">
+							<img src="/img/foto2.jpg">
+						</div>
+					</li>
+					<li class="span3"><!--noticias normal-->
+						<div class="thumbnail">
+							<img src="/img/foto2.jpg">
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div><!--termina la primera edicion-->
+	<div class="container"><!--inicia Romance-->
+		<h1><img src="/img/corazon.png">Romance</h1>
+	<div class="display">
+		<div class="row">
+			<div class="span5">
+				<ul class="thumbnails">
+					<li class="span5"><!--noticias normal-->
+						<div class="thumbnail flip-container" ontouchstart="this.classList.toggle('hover');">
+							<div class="flipper">
+								<div class="front">
+									<img src="/img/foto2.jpg" style="width: 360px; height: 270px;">
+									<!-- front content -->
+								</div>
+								<div class="back">
+									<img src="/img/p-1.png">
+									<!-- back content -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul class="thumbnails">
+					<li class="span3"><!--noticias normal-->
+						<div class="thumbnail">
+							<img src="/img/foto2.jpg">
+						</div>
+					</li>
+					<li class="span3"><!--noticias normal-->
+						<div class="thumbnail">
+							<img src="/img/foto2.jpg">
+						</div>
+					</li>
+					<li class="span3"><!--noticias normal-->
+						<div class="thumbnail">
+							<img src="/img/foto2.jpg">
+						</div>
+					</li>
+					<li class="span3"><!--noticias normal-->
+						<div class="thumbnail">
+							<img src="/img/foto2.jpg">
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div><!--termina la primera edicion-->
+</div>
