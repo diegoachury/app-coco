@@ -128,18 +128,26 @@ text-shadow: 0 1px 0 #ffffff;
 <div class="container">
 	<div class="row">
 		<h1>Solo</h1>
+    
 		<ul class="thumbnails display">
+      <%@site.each do |sites|%>
             <li class="span3">
               <a href="#" class="thumbnail">
-                <img alt="360x270" style="width: 260px; height: 120px;" src="/img/img1.png">
+                <h4><%=sites.nombre%></h4>
+                <h4></h4>
+                <img alt="360x270" style="width: 260px; height: 120px;" src="">
               </a>
             </li>
+            <% end %>
           </ul>
+        
+
+
           <h1>Romance</h1>
 		<ul class="thumbnails display">
-            <li class="span3">
+            <li class="span5">
               <a href="#" class="thumbnail">
-                <img alt="360x270" style="width: 260px; height: 120px;" src="/img/img1.png">
+                <img alt="360x270" style="width: 360px; height: 270px;" src="/img/img1.png">
               </a>
             </li>
           </ul>

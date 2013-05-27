@@ -20,7 +20,7 @@
     <td><%= site.precio %></td>
     <td><%= site.transporte %></td>
     <td><%= site.direccion %></td>
-    <td><%= site.category %></td>
+    <td><%= site.category.nombre %></td>
     <td><%= link_to 'Show', site %></td>
     <td><%= link_to 'Edit', edit_site_path(site) %></td>
     <td><%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %></td>
