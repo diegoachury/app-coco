@@ -1,69 +1,213 @@
 <style>
 
+.botonr {
+  -moz-box-shadow:inset 0px 1px 0px 0px #5dc1b9;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #5dc1b9;
+  box-shadow:inset 0px 1px 0px 0px #5dc1b9;
+  background-color:#5dc1b9;
+  display:inline-block;
+  color:#ffffff;
+  font-family:arial;
+  font-size:21px;
+  font-weight:bold;
+  padding:14px 34px;
+  text-decoration:none;
+  text-shadow:1px 1px 0px #5dc1b9;
+}.botonr:hover {
+  background-color:#5fc9c0;
+}.botonr:active {
+  position:relative;
+  top:1px;
+}
+
+.botonrx {
+  -moz-box-shadow:inset 0px 1px 0px 0px #5dc1b9;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #5dc1b9;
+  box-shadow:inset 0px 1px 0px 0px #5dc1b9;
+  background-color:#5dc1b9;
+  display:inline-block;
+  color:#ffffff;
+  font-family:arial;
+  font-size:12px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:1px 1px 0px #5dc1b9;
+}.botonrx:hover {
+  background-color:#5fc9c0;
+}.botonrx:active {
+  position:relative;
+  top:1px;
+}
+
+.flip-containerx {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+
+  border: 1px solid #ccc;
+}
+
+  .flip-containerx:hover .flipper,  
+  .flip-containerx.hover .flipper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+
+.flip-containerx, .frontx, .backx {
+  /*width: 320px;
+  height: 427px;*/
+  width: 210px;
+  height: 210px;
+
+}
+
+.flipper {
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+  
+  -o-transition: 0.6s;
+  -o-transform-style: preserve-3d;
+
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+.frontx, .backx {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.frontx {
+  background: #625f50;
+  z-index: 2;
+}
+
+.backx {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+
+  background: #d22e37;
+}
+
+
+
+
+/**/
+
+
+
+
 .flip-container {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
   -o-perspective: 1000;
   perspective: 1000;
 
-	border: 1px solid #ccc;
+  border: 1px solid #ccc;
 }
 
-	.flip-container:hover .flipper,  
+  .flip-container:hover .flipper,  
   .flip-container.hover .flipper {
-		-webkit-transform: rotateY(180deg);
-		-moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
-		transform: rotateY(180deg);
-	}
+    transform: rotateY(180deg);
+  }
 
 .flip-container, .front, .back {
-	/*width: 320px;
-	height: 427px;*/
-	width: 360px;
-	height: 270px;
+  /*width: 320px;
+  height: 427px;*/
+  width: 450px;
+  height: 450px;
 
 }
 
 .flipper {
-	-webkit-transition: 0.6s;
-	-webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
 
-	-moz-transition: 0.6s;
-	-moz-transform-style: preserve-3d;
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
   
   -o-transition: 0.6s;
-	-o-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
 
-	transition: 0.6s;
-	transform-style: preserve-3d;
+  transition: 0.6s;
+  transform-style: preserve-3d;
 
-	position: relative;
+  position: relative;
 }
 
 .front, .back {
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
-	backface-visibility: hidden;
+  backface-visibility: hidden;
 
-	position: absolute;
-	top: 0;
-	left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .front {
-	background: #00A480;
-	z-index: 2;
+  background: #625f50;
+  z-index: 2;
 }
 
-.back {
-	-webkit-transform: rotateY(180deg);
-	-moz-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-	transform: rotateY(180deg);
+/*inicia css para poner destacados*/
+.despo{
+position:absolute;
+left:0px;
+top:330px;
+background: #d22e37;
 
-	background: #FFF400;
+}
+/*interno css para poner destacados*/
+.interno-d {
+position:absolute;
+left:10px;
+top:20px;
+
+}
+.interno-dx {
+position:absolute;
+left:10px;
+top:20px;
+
+}
+
+.interno-ver {
+position:absolute;
+left:112px;
+top:160px;
+
+}
+
+
+.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+
+  background: #d22e37;
 }
 
 
@@ -105,61 +249,351 @@ margin: 19px 0 0 -10px;
 overflow: hidden;
 }
 
-/**/
-.navbar .brands {
-display: block;
-float: center;
-/*margin-left: -20px;*/
-font-size: 20px;
-font-weight: 200;
-color: #777777;
-/*background-color: #ffe300;*/
-text-shadow: 0 1px 0 #ffffff;
+.historia {
+color: #FFFFFF;
+}
+.ancho {
+width: 130px;
 }
 
+.m-btn.green {
+color: white;
+text-shadow: none;
+background-color: #35aa47;
+background-image: -moz-linear-gradient(top,#35aa47,#35aa47);
+background-image: -ms-linear-gradient(top,#35aa47,#35aa47);
+background-image: -webkit-gradient(linear,0 0,0 100%,from(#35aa47),to(#35aa47));
+background-image: -webkit-linear-gradient(top,#35aa47,#35aa47);
+background-image: -o-linear-gradient(top,#35aa47,#35aa47);
+background-image: linear-gradient(top,#35aa47,#35aa47);
+background-repeat: repeat-x;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#35aa47',endColorstr='#35aa47',GradientType=0);
+}
+h3 {
+  color: white;
+}
+.turquesa{
+  font-family: 'Fugaz One', cursive;
+  font-weight: 400;
+  color: #5DC1B9;
+  font-size: 18.5px;
+}
+.text-white{
+  color: white;
+}
+.h1-inter{
+  font-family: 'Fugaz One', cursive;
+  font-size: 25.5px;
+font-weight: 400;
+color: #FFF400;
+}
 </style>
 
-
 <div class="container-fluid">
-
-<%= render 'share/carousel'%>
-
+  <%= render 'share/carousel'%>
 </div>
+  <!--Romance-->
 <div class="container">
-	<div class="row">
-		<h1>Solo</h1>
-    
-		<ul class="thumbnails display">
-      <%@site.each do |sites|%>
-            <li class="span3">
-              <a href="#" class="thumbnail">
-                <h4><%=sites.nombre%></h4>
-                <h4></h4>
-                <img alt="360x270" style="width: 260px; height: 120px;" src="">
-              </a>
-            </li>
-            <% end %>
-          </ul>
-        
+  <h1 style="color: #b71c2a;"><img src="/img/corazon.png">Romance</h1>
+  <div class="display">
+    <div class="row">
+      <div class="span6">
+        <ul class="thumbnails">
+          <%@destacados_romance.each do |site|%>
+          <li class="span6"><!--noticias normal-->
+            <div class="thumbnail flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <div class="despo">
+                    <h1>Recomendado</h1>
+                    <h3><%= site.nombre%></h3>
+                  </div>                  
+                  <img src="<%= site.foto%>"style="width: 450px; height:450px;">
+                  <!-- front content -->
+                </div>
+                <div class="back">
+                  <div class="interno-d">
+                    <h1><%=site.nombre%></h1>
+                    <p class="turquesa">
+                      <img src="/img/strew.png" style="width: 32px; heigth:32px;"> <strong><%=site.direccion%></strong>
+                    </p>
+                    <p class="historia">
+                      <img src="/img/comilla-abre.png" style="width: 24px; heigth:24px;"> <%=site.descripcion%> <img src="/img/comilla-cierra.png" style="width: 24px; heigth:24px;">
+                    </p>
+                    <br>
+                     <div class="row">
+                      <div class="span3">
+                        <p class="turquesa"><strong>Valor</strong></p>
+                        <h1>$ <%=site.precio%></h1>
+                      </div>
+                    </div>
+                    <div><%= link_to "<div class='botonr'>Ver mas</div>".html_safe, :action=>"show", :controller=>"sites", :id => site %></div>
+                  </div>                  
+                  <!-- back content -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+      <ul class="thumbnails">
+         <%@sites_romance.each do |site|%>
+          <li class="span3"><!--noticias normal-->
+             <div class="thumbnail flip-containerx" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="frontx">
+                  <img src="<%= site.foto%>" style="width: 210px; height:210px;">
+                 
+                  <!-- front content -->
+                </div>
+                <div class="backx">
+                   <div class="interno-dx">
+                    <h1><%= site.nombre%></h1>
+                    <p class="text-white"><strong>por solo</strong></p>
+                    <p class="h1-inter">$ <%= site.precio%></p>
+                  <p><%= site.created_at.to_s(:short)%></p>
+                   </div>
+                    <div class="interno-ver">
+                      <%= link_to "<div class='botonrx'>Ver mas</div>".html_safe, :action=>"show", :controller=>"sites", :id => site %>
+                    </div>                  <!-- back content -->
+                </div>
+              </div>
+            </div>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+       <div class="center"><%= link_to "Ver mas".html_safe, :action=>"index", :controller=>"sites" %></div>       
+    </div>
+  </div>
+  </div><!--termina la primera edicion-->
+  <!-- Cultura -->
+  <!--Cultura-->
+<div class="container">
+  <h1 style="color: #F37A00;"><img src="/img/cultura.png">Cultura</h1>
+  <div class="display">
+    <div class="row">
+      <div class="span6">
+        <ul class="thumbnails">
+          <%@destacados_cultura.each do |site|%>
+          <li class="span6"><!--noticias normal-->
+            <div class="thumbnail flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front" style=" background: #F37A00;">
+                  <div class="despo" style="background: #F37A00;">
+                    <h1>Recomendado</h1>
+                    <h3><%= site.nombre%></h3>
+                  </div>                  
+                  <img src="<%= site.foto%>"style="width: 450px; height:450px;">
+                  <!-- front content -->
+                </div>
+                <div class="back" style=" background: #F37A00;">
+                  <div class="interno-d">
+                    <h1><%=site.nombre%></h1>
+                    <p class="turquesa">
+                      <img src="/img/strew.png" style="width: 32px; heigth:32px;"> <strong><%=site.direccion%></strong>
+                    </p>
+                    <p class="historia">
+                      <img src="/img/comilla-abre.png" style="width: 24px; heigth:24px;"> <%=site.descripcion%> <img src="/img/comilla-cierra.png" style="width: 24px; heigth:24px;">
+                    </p>
+                    <br>
+                     <div class="row">
+                      <div class="span3">
+                        <p class="turquesa"><strong>Valor</strong></p>
+                        <h1>$ <%=site.precio%></h1>
+                      </div>
+                    </div>
+                    <div><%= link_to "<div class='botonr'>Ver mas</div>".html_safe, :action=>"show", :controller=>"sites", :id => site %></div>
+                  </div>                  
+                  <!-- back content -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+      <ul class="thumbnails">
+         <%@sites_cultura.each do |site|%>
+          <li class="span3"><!--noticias normal-->
+             <div class="thumbnail flip-containerx" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="frontx" style="background: #F37A00;">
+                  <img src="<%= site.foto%>" style="width: 210px; height:210px;">
+                  <!-- front content -->
+                </div>
+                <div class="backx" style="background: #F37A00;">
+                   <div class="interno-dx">
+                    <h1><%= site.nombre%></h1>
+                    <p class="text-white"><strong>por solo</strong></p>
+                    <p class="h1-inter">$ <%= site.precio%></p>
+                  <p><%= site.created_at.to_s(:short)%></p>
+                   </div>
+                    <div class="interno-ver">
+                      <%= link_to "<div class='botonrx'>Ver mas</div>".html_safe, :action=>"show", :controller=>"sites", :id => site %>
+                    </div>                  <!-- back content -->
+                </div>
+              </div>
+            </div>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+       <div class="center"><%= link_to "Ver mas".html_safe, :action=>"index", :controller=>"sites" %></div>       
+    </div>
+  </div>
+  </div><!--termina la primera edicion-->  
+<!--Aventura-->  
+<div class="container">
+  <h1 style="color: #F37A00;"><img src="/img/aventura.png">Aventura</h1>
+  <div class="display">
+    <div class="row">
+      <div class="span6">
+        <ul class="thumbnails">
+          <%@destacados_aventura.each do |site|%>
+          <li class="span6"><!--noticias normal-->
+            <div class="thumbnail flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front" style=" background: #F37A00;">
+                  <div class="despo" style="background: #F37A00;">
+                    <h1>Recomendado</h1>
+                    <h3><%= site.nombre%></h3>
+                  </div>                  
+                  <img src="<%= site.foto%>"style="width: 450px; height:450px;">
+                  <!-- front content -->
+                </div>
+                <div class="back" style=" background: #F37A00;">
+                  <div class="interno-d">
+                    <h1><%=site.nombre%></h1>
+                    <p class="turquesa">
+                      <img src="/img/strew.png" style="width: 32px; heigth:32px;"> <strong><%=site.direccion%></strong>
+                    </p>
+                    <p class="historia">
+                      <img src="/img/comilla-abre.png" style="width: 24px; heigth:24px;"> <%=site.descripcion%> <img src="/img/comilla-cierra.png" style="width: 24px; heigth:24px;">
+                    </p>
+                    <br>
+                     <div class="row">
+                      <div class="span3">
+                        <p class="turquesa"><strong>Valor</strong></p>
+                        <h1>$ <%=site.precio%></h1>
+                      </div>
+                    </div>
+                    <div><%= link_to "<div class='botonr'>Ver mas</div>".html_safe, :action=>"show", :controller=>"sites", :id => site %></div>
+                  </div>                  
+                  <!-- back content -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+      <ul class="thumbnails">
+         <%@sites_aventura.each do |site|%>
+          <li class="span3"><!--noticias normal-->
+             <div class="thumbnail flip-containerx" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="frontx" style="background: #F37A00;">
+                  <img src="<%= site.foto%>" style="width: 210px; height:210px;">
+                  <!-- front content -->
+                </div>
+                <div class="backx" style="background: #F37A00;">
+                   <div class="interno-dx">
+                    <h1><%= site.nombre%></h1>
+                    <p class="text-white"><strong>por solo</strong></p>
+                    <p class="h1-inter">$ <%= site.precio%></p>
+                  <p><%= site.created_at.to_s(:short)%></p>
+                   </div>
+                    <div class="interno-ver">
+                      <%= link_to "<div class='botonrx'>Ver mas</div>".html_safe, :action=>"show", :controller=>"sites", :id => site %>
+                    </div>                  <!-- back content -->
+                </div>
+              </div>
+            </div>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+       <div class="center"><%= link_to "Ver mas".html_safe, :action=>"index", :controller=>"sites" %></div>       
+    </div>
+  </div>
+  </div><!--termina la primera edicion-->  
+<!--Solo-->  
+<div class="container">
+  <h1 style="color: #F37A00;"><img src="/img/solo.png">Solo</h1>
+  <div class="display">
+    <div class="row">
+      <div class="span6">
+        <ul class="thumbnails">
+          <%@destacados_solo.each do |site|%>
+          <li class="span6"><!--noticias normal-->
+            <div class="thumbnail flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front" style=" background: #F37A00;">
+                  <div class="despo" style="background: #F37A00;">
+                    <h1>Recomendado</h1>
+                    <h3><%= site.nombre%></h3>
+                  </div>                  
+                  <img src="<%= site.foto%>"style="width: 450px; height:450px;">
+                  <!-- front content -->
+                </div>
+                <div class="back" style=" background: #F37A00;">
+                  <div class="interno-d">
+                    <h1><%=site.nombre%></h1>
+                    <p class="turquesa">
+                      <img src="/img/strew.png" style="width: 32px; heigth:32px;"> <strong><%=site.direccion%></strong>
+                    </p>
+                    <p class="historia">
+                      <img src="/img/comilla-abre.png" style="width: 24px; heigth:24px;"> <%=site.descripcion%> <img src="/img/comilla-cierra.png" style="width: 24px; heigth:24px;">
+                    </p>
+                    <br>
+                     <div class="row">
+                      <div class="span3">
+                        <p class="turquesa"><strong>Valor</strong></p>
+                        <h1>$ <%=site.precio%></h1>
+                      </div>
+                    </div>
+                    <div><%= link_to "<div class='botonr'>Ver mas</div>".html_safe, :action=>"show", :controller=>"sites", :id => site %></div>
+                  </div>                  
+                  <!-- back content -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+      <ul class="thumbnails">
+         <%@sites_solo.each do |site|%>
+          <li class="span3"><!--noticias normal-->
+             <div class="thumbnail flip-containerx" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="frontx" style="background: #F37A00;">
+                  <img src="<%= site.foto%>" style="width: 210px; height:210px;">
+                  <!-- front content -->
+                </div>
+                <div class="backx" style="background: #F37A00;">
+                   <div class="interno-dx">
+                    <h1><%= site.nombre%></h1>
+                    <p class="text-white"><strong>por solo</strong></p>
+                    <p class="h1-inter">$ <%= site.precio%></p>
+                  <p><%= site.created_at.to_s(:short)%></p>
+                   </div>
+                    <div class="interno-ver">
+                      <%= link_to "<div class='botonrx'>Ver mas</div>".html_safe, :action=>"show", :controller=>"sites", :id => site %>
+                    </div>                  <!-- back content -->
+                </div>
+              </div>
+            </div>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+       <div class="center"><%= link_to "Ver mas".html_safe, :action=>"index", :controller=>"sites" %></div>       
+    </div>
+  </div>
+  </div><!--termina la primera edicion-->  
 
 
-          <h1>Romance</h1>
-		<ul class="thumbnails display">
-            <li class="span5">
-              <a href="#" class="thumbnail">
-                <img alt="360x270" style="width: 360px; height: 270px;" src="/img/img1.png">
-              </a>
-            </li>
-          </ul>
-           <h1>Cultura</h1>
-		<ul class="thumbnails display">
-            <li class="span3">
-              <a href="#" class="thumbnail">
-                <img alt="360x270" style="width: 260px; height: 120px;" src="/img/img1.png">
-              </a>
-            </li>
-          </ul>
 
-	</div>
-
-</div>

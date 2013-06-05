@@ -14,3 +14,9 @@
 body{
 	padding-top: 40px;
 }
+footer #copy {
+background: #242424;
+padding: 10px 0;
+color: #fff;
+font-size: 11px;
+}
