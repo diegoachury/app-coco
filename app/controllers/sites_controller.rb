@@ -5,7 +5,9 @@ class SitesController < ApplicationController
     @sites = Site.all
 
     respond_to do |format|
+      #format.html {redirect_to root_path}
       format.html # index.html.erb
+      #format.js
       format.json { render json: @sites }
     end
   end
@@ -16,8 +18,10 @@ class SitesController < ApplicationController
     @site = Site.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @site }
+      format.html 
+      #format.html # show.html.erb
+      format.js
+      #format.json { render json: @site }
     end
   end
 
