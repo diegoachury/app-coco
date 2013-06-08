@@ -1,18 +1,87 @@
-<h1>Listing sites</h1>
+<script>
+  $(function(){
+    
+    $('#container').masonry({
+      itemSelector: '.box',
+      columnWidth: 100
+    });
+    
+  });
+</script>
+<style>
+/**** Demos ****/
+
+#container {
+  background: #FFF;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  clear: both;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.centered { margin: 0 auto; }
+
+.box {
+  margin: 5px;
+  padding: 5px;
+  background: #D8D5D2;
+  font-size: 11px;
+  line-height: 1.4em;
+  float: left;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.box h2 {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.box img,
+#tumblelog img {
+  display: block;
+  width: 100%;
+}
+
+.rtl .box {
+  float: right;
+  text-align: right; 
+  direction: rtl;
+}
+
+
+
+.col1 { width: 80px; }
+.col2 { width: 180px; }
+.col3 { width: 280px; }
+.col4 { width: 380px; }
+.col5 { width: 480px; }
+
+.col1 img { max-width: 80px; }
+.col2 img { max-width: 180px; }
+.col3 img { max-width: 280px; }
+.col4 img { max-width: 380px; }
+.col5 img { max-width: 480px; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+</style>
+
+<div id="container" class="clearfix">
+<% @sites.each do |site| %>
+      <div class="box <%=site.transporte %>">
+        <p><strong><%= site.nombre %></strong></p>
+        <img src="<%=site.foto%>">
+    <p><%= site.descripcion %></p>
+  </div>
+  <% end %>
+</div>
 
 <table>
-  <tr>
-    <th>Nombre</th>
-    <th>Descripcion</th>
-    <th>Precio</th>
-    <th>Transporte</th>
-    <th>Direccion</th>
-    <th>Category</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @sites.each do |site| %>
   <tr>
     <td><%= site.nombre %></td>
@@ -30,5 +99,21 @@
 
 <%= render 'share/modal'%>
 <br />
+
+<div id="container" class="clearfix">
+    <div class="box col2">
+        <img src="/img/foto1.jpg">
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+  </div>
+    <div class="box col1 ">
+        <img src="/img/foto1.jpg">
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+  </div>
+    <div class="box col4">
+        <img src="/img/foto1.jpg">
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+  </div>
+      
+</div>
 
 <%= link_to 'New Site', new_site_path %>
