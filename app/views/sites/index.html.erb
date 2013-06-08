@@ -71,49 +71,26 @@
 .clearfix { zoom: 1; }
 </style>
 
+<%= form_tag sites_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :nombre => nil %>
+  </p>
+<% end %>
 <div id="container" class="clearfix">
+
 <% @sites.each do |site| %>
       <div class="box <%=site.transporte %>">
         <p><strong><%= site.nombre %></strong></p>
         <img src="<%=site.foto%>">
     <p><%= site.descripcion %></p>
+    <%= link_to 'Show', site, data: {toggle:"modal", target: "#ajax-modal"} %>
+    <%= link_to 'Edit', edit_site_path(site) %>
+    <%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
   <% end %>
 </div>
 
-<table>
-<% @sites.each do |site| %>
-  <tr>
-    <td><%= site.nombre %></td>
-    <td><%= site.descripcion %></td>
-    <td><%= site.precio %></td>
-    <td><%= site.transporte %></td>
-    <td><%= site.direccion %></td>
-    <td><%= site.category.nombre %></td>
-    <td><%= link_to 'Show', site, data: {toggle:"modal", target: "#ajax-modal"} %></td>
-    <td><%= link_to 'Edit', edit_site_path(site) %></td>
-    <td><%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
 <%= render 'share/modal'%>
-<br />
-
-<div id="container" class="clearfix">
-    <div class="box col2">
-        <img src="/img/foto1.jpg">
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-  </div>
-    <div class="box col1 ">
-        <img src="/img/foto1.jpg">
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-  </div>
-    <div class="box col4">
-        <img src="/img/foto1.jpg">
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-  </div>
-      
-</div>
 
 <%= link_to 'New Site', new_site_path %>

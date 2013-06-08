@@ -3,6 +3,7 @@ class SitesController < ApplicationController
   # GET /sites.json
   def index
     @sites = Site.all
+     @sites = Site.search(params[:search])
 
     respond_to do |format|
       #format.html {redirect_to root_path}
