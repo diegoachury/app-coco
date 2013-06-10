@@ -74,7 +74,7 @@
 <div id="container" class="clearfix">
 
 <% @sites.each do |site| %>
-      <div class="box <%=site.transporte %>">
+      <div class="box <%=site.col %>" style ="background: <%= site.background %>">
         <p><strong><%= site.nombre %></strong></p>
         <img src="<%=site.foto%>">
     <p><%= site.descripcion %></p>
