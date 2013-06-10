@@ -70,13 +70,7 @@
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 </style>
-
-<%= form_tag sites_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :nombre => nil %>
-  </p>
-<% end %>
+<br>
 <div id="container" class="clearfix">
 
 <% @sites.each do |site| %>

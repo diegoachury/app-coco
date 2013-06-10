@@ -27,11 +27,17 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3A3731', endC
             <p class="navbar-text pull-right">
               Logged in as <a href="#" class="navbar-link">Username</a>
             </p>
-            <ul class="nav">
+            <!--<ul class="nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
-            </ul>
+            </ul>-->
+            <%= form_tag sites_path, :method => 'get', :class => 'form-search' do %>
+            <div class="input-append">
+              <%= text_field_tag :search, params[:search], :class =>'span2 search-query' %>
+              <%= submit_tag "Buscar", :nombre => nil, :class => 'btn' %>
+            </div>
+            <% end %>
           </div><!--/.nav-collapse -->
         </div>
       </div>

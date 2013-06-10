@@ -6,7 +6,8 @@ class Site < ActiveRecord::Base
 
   def self.search(search)
   	if search
-  		find(:all, :conditions => ['nombre LIKE ?', "%#{search}%"])
+  		find(:all, :conditions => ['nombre LIKE ? OR descripcion LIKE ?', "%#{search}%", "%#{search}%"])
+      #find(:all, :conditions => ['descripcion LIKE ?', "%#{search}%"])
   	else
   		find(:all)
   	end  	

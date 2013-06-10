@@ -22,7 +22,11 @@ end
 
 gem 'jquery-rails'
 gem 'simple_form'
+#gem 'sunspot_rails' #gema para busqueda fulltex
 
+#  group :development do
+#    gem 'sunspot_solr' #creamos el grupo de desarrollo y agregamos la gema 
+#  end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
