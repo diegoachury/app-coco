@@ -1,16 +1,27 @@
-<script>
-  $(function(){
-    
-    $('#container').masonry({
-      itemSelector: '.box',
-      columnWidth: 100
-    });
-    
-  });
-</script>
+
 <style>
 /**** Demos ****/
 
+
+
+#container {
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+
+#container:before,
+#container:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+#container:after {
+  clear: both;
+}
+
+/*
 #container {
   background: #FFF;
   padding: 5px;
@@ -20,20 +31,24 @@
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
-}
+}*/
 
 .centered { margin: 0 auto; }
 
 .box {
   margin: 5px;
   padding: 5px;
-  background: #D8D5D2;
+  background: #ffffff;
   font-size: 11px;
   line-height: 1.4em;
   float: left;
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
+  /*efecto de sombra en box*/        
+  -webkit-box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.3);
+  -moz-box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.3);
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.3);
 }
 
 .box h2 {
@@ -69,15 +84,55 @@
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
+
+/*letra*/
+.titulo {
+  font-family: 'Fugaz One',  cursive;
+  font-weight: 400; 
+  color: #eb5545; 
+  font-size: 17px;
+}
+#titulo-dinero{
+ color:#ffffff;
+font-size: 22px;
+}
+p{
+  color: #282828; 
+  font-size: 12px;
+}
+.precio{
+position:absolute;
+left:15px;
+top:60px;
+/*css para circulo*/
+/*background-color: #449700; 
+width: 55px; 
+height: 55px;
+border-radius: 55px; 
+-moz-border-radius: 55px;  Mozilla Firefox
+-webkit-border-radius: 55px;  Google Chrome y Safari */
+}
+.logo{
+position:absolute;
+left:15px;
+top:60px;
+border-radius:50%;
+-moz-border-radius:50%;
+-webkit-border-radius:50%;
+}
+body{
+  background-color: #dee3e7;
+}
 </style>
 <br>
-<div id="container" class="clearfix">
-
+<div id="container">
 <% @sites.each do |site| %>
       <div class="box <%=site.col %>" style ="background: <%= site.background %>">
-        <p><strong><%= site.nombre %></strong></p>
+        <p class="titulo"><strong><%= site.nombre %></strong></p>
         <img src="<%=site.foto%>">
-    <p><%= site.descripcion %></p>
+        <div class="precio"><p id="titulo-dinero"><strong>$ <%= site.precio %></strong></p></div>
+        <p><%= site.descripcion.truncate(80) %></p>
+        <p><%= site.category.nombre %></p>
     <%= link_to 'Show', site, data: {toggle:"modal", target: "#ajax-modal"} %>
     <%= link_to 'Edit', edit_site_path(site) %>
     <%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %>

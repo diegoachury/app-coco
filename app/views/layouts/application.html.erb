@@ -4,9 +4,10 @@
   <title>AppCoco</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag('jquery.masonry.min') %>
+  <%= javascript_include_tag('jquery.masonry') %>
   <link href='http://fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
+ 
 </head>
 <body>
 	<%= render 'share/nav'%>
@@ -29,6 +30,17 @@
 			</div>
 		</div>
 </footer>
+ <script>
+  $(function(){
+    
+    $('#container').masonry({
+      itemSelector: '.box',
+  columnWidth: 100,
+  isAnimated: true
+    });
+    
+  });
+</script>
 
 </body>
 </html>
