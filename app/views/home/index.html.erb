@@ -1,4 +1,23 @@
 <style>
+.boton-mas {
+  -moz-box-shadow:inset 0px 1px 0px 0px #509e44;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #509e44;
+  box-shadow:inset 0px 1px 0px 0px #509e44;
+  background-color:#509e44;
+  display:inline-block;
+  color:#ffffff;
+  font-family:arial;
+  font-size:21px;
+  font-weight:bold;
+  padding:14px 34px;
+  text-decoration:none;
+  text-shadow:1px 1px 0px #509e44;
+}.boton-mas:hover {
+  background-color:#53b647;
+}.boton-mas:active {
+  position:relative;
+  top:1px;
+}
 
 .botonr {
   -moz-box-shadow:inset 0px 1px 0px 0px #5dc1b9;
@@ -287,6 +306,10 @@ h3 {
 font-weight: 400;
 color: #FFF400;
 }
+
+.center{
+text-align:center;
+}
 </style>
 
 <div class="container-fluid">
@@ -364,7 +387,7 @@ color: #FFF400;
           <% end %>
         </ul>
       </div>
-       <div class="center"><%= link_to "Ver mas".html_safe, :action=>"index", :controller=>"sites" %></div>       
+       <div class="center"><%= link_to "<div class='boton-mas'>Ver mas</div>".html_safe, :action=>"index", :controller=>"sites" %></div>       
     </div>
   </div>
   </div><!--termina la primera edicion-->
@@ -440,7 +463,7 @@ color: #FFF400;
           <% end %>
         </ul>
       </div>
-       <div class="center"><%= link_to "Ver mas".html_safe, :action=>"index", :controller=>"sites" %></div>       
+       <div class="center"><%= link_to "<div class='boton-mas'>Ver mas</div>".html_safe, :action=>"index", :controller=>"sites" %></div>       
     </div>
   </div>
   </div><!--termina la primera edicion-->  
@@ -515,7 +538,7 @@ color: #FFF400;
           <% end %>
         </ul>
       </div>
-       <div class="center"><%= link_to "Ver mas".html_safe, :action=>"index", :controller=>"sites" %></div>       
+       <div class="center"><%= link_to "<div class='boton-mas'>Ver mas</div>".html_safe, :action=>"index", :controller=>"sites" %></div>       
     </div>
   </div>
   </div><!--termina la primera edicion-->  
@@ -590,7 +613,7 @@ color: #FFF400;
           <% end %>
         </ul>
       </div>
-       <div class="center"><%= link_to "Ver mas".html_safe, :action=>"index", :controller=>"sites" %></div>       
+       <div class="center"><%= link_to "<div class='boton-mas'>Ver mas</div>".html_safe, :action=>"index", :controller=>"sites" %></div>       
     </div>
   </div>
   </div><!--termina la primera edicion-->  
